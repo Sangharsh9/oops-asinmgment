@@ -6,7 +6,7 @@ int id;
 string name;
 int sal;
 virtual void accept()=0;
-
+virtual void display()=0;
 
 
 
@@ -61,14 +61,58 @@ cout<<name<<"\t"<<id<<"\t"<<sal<<endl;
 
 int main() {
 Doctor d;
-Astaff a;
-Patient p;
-p.accept();
+Astaff a[5];
+Patient p[5];
+int ch;
+cout<<"1 to accept doctor"<<endl<<"2 to  accept patient "<<endl<<"3 to  accept astaff"<<endl<<"4 to display patient "<<endl<<"5 to display staff "<<endl<<"6 to display doctor"<<endl;
+cin>>ch;
+while(ch!=0){
+switch (ch){
+case 1 :
 d.accept();
-d.accept();
-p.display();
+break;
+case 2 :
+for(int i=0;i<5;i++){
+p[i].accpet();
+
+
+}
+break;
+case 3 :
+for(int i=0;i<5;i++){
+a[i].accept();
+
+}
+break;
+case 4 :
+for(int i=0;i<5;i++){
+p[i].display();
+
+
+}
+break;
+case 5:
+for(int i=0;i<5;i++){
+a[i].display();
+
+
+}
+break;
+case 6:
 d.display();
-a.display();
+break;
+
+}cout<<"1 to accept doctor"<<endl<<"2 to  accept patient "<<endl<<"3 to  accept astaff"<<endl<<"4 to display patient "<<endl<<"5 to display staff "<<endl<<"6 to display doctor"<<endl;
+cin>>ch;
+
+
+
+
+
+
+}
+
+
 
 
 
